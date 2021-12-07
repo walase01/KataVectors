@@ -6,7 +6,25 @@ using System.Threading.Tasks;
 
 namespace KataVectors
 {
-    class MagnitudandConstructor
+    public class MagnitudandConstructor
     {
+        public MagnitudandConstructor()
+        {
+
+        }
+
+        public double DetMagnitud(double[] vect1)
+        {
+
+            double multiplicacion = 0;
+            double sumatoria = 0;
+
+            for(int i = 0; i < vect1.Length; i++)
+            {
+                multiplicacion = vect1[i] * vect1[i];
+                sumatoria += multiplicacion;
+            }
+            return Math.Round(Math.Sqrt(sumatoria),3);
+        }
     }
 }
