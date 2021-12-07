@@ -8,7 +8,7 @@ namespace TestProjectVectors
 
         public MagnitudandConstructor magnitudandConstructor = new MagnitudandConstructor();
         public double[] vect1 = new double[] { 2, 5, 3 };
-
+        public double[] vect2 = new double[] { 2, 5, 3 };
 
         [TestMethod]
         public void TestMethodMagnitude()
@@ -16,6 +16,18 @@ namespace TestProjectVectors
            double respuesta =  magnitudandConstructor.DetMagnitud(vect1);
 
             Assert.AreEqual(6.164, respuesta);
+        }
+
+        [TestMethod]
+        public void DotProct()
+        {
+            double[] respuesta = DotProduct.dorProduct(vect1, vect2);
+            double[] productanswer = new double[3] { 4, 25, 9 };
+
+            for(int i = 0; i < 3; i++)
+            {
+                Assert.AreEqual(productanswer[i], respuesta[i]);
+            }
         }
     }
 }
