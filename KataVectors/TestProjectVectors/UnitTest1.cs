@@ -29,5 +29,14 @@ namespace TestProjectVectors
                 Assert.AreEqual(productanswer[i], respuesta[i]);
             }
         }
+
+        [TestMethod]
+        public void AngleBetweenTest()
+        {
+            double respuesta = AngleBetween.angle_between(vect1, vect2);
+
+            Assert.AreEqual(1.000, respuesta);
+        }
+
     }
 }
